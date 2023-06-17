@@ -34,6 +34,9 @@ export type IAuthGuard = CanActivate & {
   getRequest<T = any>(context: ExecutionContext): T;
 };
 
+/**
+ * @publicApi
+ */
 export const AuthGuard: (type?: string | string[]) => Type<IAuthGuard> =
   memoize(createAuthGuard);
 

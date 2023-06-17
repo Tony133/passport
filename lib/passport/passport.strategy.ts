@@ -1,6 +1,9 @@
 import * as passport from 'passport';
 import { Type } from '../interfaces';
 
+/**
+ * @publicApi
+ */
 export function PassportStrategy<T extends Type<any> = any>(
   Strategy: T,
   name?: string | undefined,
